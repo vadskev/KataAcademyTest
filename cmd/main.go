@@ -1,7 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"kata/internal"
+)
 
 func main() {
-	fmt.Println("test")
+	fmt.Println("Введите операцию:")
+	line := internal.ReadConsole()
+	res, _ := internal.Calc(line)
+
+	fmt.Printf("Output: %s\n", res)
 }
